@@ -351,7 +351,7 @@ B) getStaticPaths
 C) useStaticProps
 D) fetchStaticRoutes
 
-### 1### 1). In Next.js, what happens when fallback: "blocking" is used?
+### 1). In Next.js, what happens when fallback: "blocking" is used?
 
 A) The static page is regenerated after the request is fulfilled
 B) Pages not generated at build time will block the request until they are pre-rendered
@@ -431,7 +431,7 @@ D) Caches data on every user request
 - Data Fetching
 - Custom Types and Utility Functions.
 
-    ###   Typing Pages (### 10 MCQs)
+    ###   Typing Pages ( 10 MCQs)
 
 ### 1). How can you type props in a functional Next.js page component?
 
