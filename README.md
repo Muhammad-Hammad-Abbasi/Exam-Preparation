@@ -140,140 +140,120 @@ D) Incremental server rendering
 ## 4).  API Routes and Middleware.
 
  ### 1). How are API routes defined in a Next.js project?
-
 A) Inside the routes folder
 B) Inside the pages/api folder
 C) Using routes.js
 D) Inside the _api directory
 
 ### 2). What is the default HTTP method for an API route in Next.js?
-
 A) GET
 B) POST
 C) PUT
 D) DELETE
 
 ### 3). Which Next.js API method is used to handle different HTTP methods in an API route?
-
 A) switch()
 B) req.method
 C) http.method()
 D) route.method
 
 ### 4). How do you send a JSON response in a Next.js API route?
-
 A) res.send({})
 B) res.end({})
 C) res.json({})
 D) res.writeJSON({})
 
 ### 5). What happens if you create a file named hello.ts in the pages/api directory?
-
 A) The /api/hello endpoint is automatically created
 B) A compilation error occurs
 C) It creates a route in pages/hello
 D) The file is ignored
 
 ### 6). What file extension is required for API route files?
-
 A) .json
 B) .api
 C) .ts or .js
 D) .route
 
 ### 7). How do you access query parameters in an API route?
-
 A) req.query
 B) req.params
 C) req.data
 D) req.body.query
 
 ### 8). What is the purpose of middleware in Next.js?
-
 A) To handle database queries
 B) To intercept and modify requests or responses
 C) To fetch client-side data
 D) To route client requests to third-party services
 
 ### 9). Where is middleware configured in a Next.js application?
-
 A) In middleware.ts at the root directory
 B) Inside the pages/api/middleware folder
 C) Using a routes.middleware.js file
 D) Inside next.config.js
 
 ### 10). What library is commonly used with middleware for request parsing?
-
 A) express
 B) next/body-parser
 C) body-parser
 D) Middleware does not require any library
 
 ### 11). How do you limit API routes to specific HTTP methods in Next.js?
-
 A) Check req.method manually in each route
 B) By defining HTTP methods in next.config.js
 C) Using a built-in method in Next.js
 D) HTTP method limits are not possible
 
 ### 12). What will happen if you call an undefined API route in Next.js?
-
 A) The request throws a runtime error
 B) A default 404 response is returned
 C) The application crashes
 D) It redirects to /api/undefined
 
 ### 13). How do you add custom headers to a response in an API route?
-
 A) res.setHeader()
 B) res.headers()
 C) req.setHeader()
 D) Custom headers cannot be added
 
 ### 14). Can API routes in Next.js be deployed as serverless functions?
-
 A) Yes, all API routes are serverless by default
 B) No, they require a dedicated server
 C) Only if configured in next.config.js
 D) Only for specific providers like AWS
 
 ### 15). How do you handle CORS in Next.js API routes?
-
 A) Using cors middleware package
 B) Through next.config.js
 C) By editing _app.tsx
 D) CORS cannot be configured in Next.js
 
 ### 16). What key property do you use in the middleware function to modify the request object?
-
 A) req.nextUrl
 B) req.update()
 C) req.middleware()
 D) req.redirectUrl
 
 ### 17). What is the NextResponse object used for in middleware?
-
 A) To fetch server data
 B) To send custom responses
 C) To initialize API routes
 D) To define global headers
 
 ### 18). How do you enable file uploads in Next.js API routes?
-
 A) Using the multer package
 B) By configuring next.fileUpload()
 C) API routes cannot handle file uploads
 D) Using file-handler middleware
 
 ### 19). What is the order of execution when using multiple middlewares?
-
 A) Based on their alphabetical order
 B) In the order they are imported or declared
 C) Randomized order
 D) Determined by Next.js
 
 ### 20). Can API routes be authenticated using middleware?
-
 A) Yes, by intercepting the request in the middleware
 B) No, authentication must happen in the frontend
 C) Only using auth.js in the pages directory
@@ -282,140 +262,120 @@ D) Middleware cannot be used for authentication
 ## 5). Static Site Generation and ISR (20 MCQs).
 
 ### 1). What method is used to generate static pages in Next.js?
-
 A) getServerSideProps
 B) getStaticProps
 C) getInitialProps
 D) fetchStaticData
 
 ### 2). What is the main purpose of Static Site Generation?
-
 A) To generate pages on every user request
 B) To pre-render pages at build time
 C) To fetch data client-side
 D) To generate pages dynamically
 
 ### 3). Which property in getStaticProps determines dynamic routes for SSG?
-
 A) fallback
 B) paths
 C) dynamicRoutes
 D) routePaths
 
-4). What is Incremental Static Regeneration (ISR)?
-
+### 4). What is Incremental Static Regeneration (ISR)?
 A) Refreshes all pages after deployment
 B) Updates a static page in the background based on user demand
 C) Regenerates pages manually by running npm run build
 D) An approach used only with dynamic imports
 
 ### 5). What Next.js method supports ISR?
-
 A) getServerSideProps
 B) getStaticProps with revalidate
 C) getStaticPaths
 D) useEffect
 
 ### 6). In ISR, what does the revalidate field in getStaticProps specify?
-
 A) The number of re-renders for a page
 B) The time (in seconds) after which the page regenerates
 C) The fallback mode for the page
 D) The path for the static file
 
 ### 7). What does the fallback: true configuration in getStaticPaths mean?
-
 A) Pages are pre-rendered for all dynamic paths
 B) Pages not generated at build time will display a fallback UI while being generated
 C) The application shows a 404 page for non-existent paths
 D) Static files are not cached
 
 ### 8). How is ISR different from traditional SSG?
-
 A) ISR allows updating static content without rebuilding the entire site
 B) ISR uses server-side rendering exclusively
 C) ISR generates static pages without any data
 D) ISR requires manual rebuilding of pages
 
 ### 9). What HTTP status code is initially returned for paths in fallback: true?
-
 A) 200
 B) 304
 C) 404
 D) 503
 
 ### 10). Which function should you combine with getStaticProps for dynamic SSG paths?
-
 A) getServerSidePaths
 B) getStaticPaths
 C) useStaticProps
 D) fetchStaticRoutes
 
-### 1). In Next.js, what happens when fallback: "blocking" is used?
-
+### 1### 1). In Next.js, what happens when fallback: "blocking" is used?
 A) The static page is regenerated after the request is fulfilled
 B) Pages not generated at build time will block the request until they are pre-rendered
 C) No fallback is allowed, and only pre-defined pages are rendered
 D) The page falls back to a server-rendered version permanently
 
 ### 12). Which lifecycle does getStaticProps run during?
-
 A) On every user request
 B) Only on the client
 C) At build time
 D) During hydration
 
 ### 13). What is a limitation of Static Site Generation?
-
 A) It requires server-side processing
 B) Cannot be used for dynamic content
 C) Rebuilds are necessary for updates without ISR
 D) It does not work with useEffect
 
 ### 14). How does ISR enhance static generation?
-
 A) By automatically refreshing cached static pages
 B) By allowing a mix of client-side rendering and server-side rendering
 C) By offering real-time page updates during runtime
 D) By reducing the build time for static files
 
 ### 15). What type of content is most suitable for SSG?
-
 A) Content that changes frequently
 B) Static content or rarely changing data
 C) User-specific data
 D) Real-time data
 
 ### 16). What environment can ISR pages be updated in without redeploying the entire app?
-
 A) During development only
 B) On staging environments
 C) On production after deployment
 D) Only in localhost
 
 ### 17). When using SSG, which build command ensures that all pages are pre-rendered?
-
 A) next dev
 B) npm start
 C) next build
 D) next generate
 
 ### 18). Can getStaticProps access cookies or headers?
-
 A) Yes, by using context.req and context.res
 B) No, as it runs during build time
 C) Only with getStaticPaths
 D) Yes, but only in development mode
  
 ### 19). What is the purpose of the build-id generated in the .next directory?
-
 A) To track ISR updates
 B) To ensure static files have unique identifiers
 C) To identify the deployed build version
 D) To optimize hydration
 
 ### 20). What advantage does SSG have over server-side rendering (SSR)?
-
 A) Pages are always up-to-date
 B) Reduces server load as pages are pre-built
 C) Provides real-time dynamic data
@@ -425,223 +385,192 @@ D) Caches data on every user request
 
 
 ## 6). Typescript Usage in Next.js (40 MCQs)
-
 - Typing Pages
 - API Routes
 - Data Fetching
 - Custom Types and Utility Functions.
 
-    ###   Typing Pages ( 10 MCQs)
+    ##  Typing Pages (### 10 MCQs)
 
 ### 1). How can you type props in a functional Next.js page component?
-
 A) props: object
 B) props: Props
 C) props: React.FC<Props>
 D) props: Page<Props>
 
 ### 2). What is the correct way to type getStaticProps in TypeScript?
-
 A) export const getStaticProps: StaticPropsType
 B) export const getStaticProps: GetStaticProps<Props>
 C) export const getStaticProps<Props>
 D) export const getStaticProps = (props: Props)
 
 ### 3). How do you declare the types for query in getServerSideProps?
-
 A) { query: ParsedUrlQuery }
 B) { query: URLSearchParams }
 C) { query: Record<string, any> }
 D) { query: string }
 
 ### 4). How do you type the default export of a page in TypeScript?
-
 A) export default FC<Props>
 B) export default React.FC<Props>
 C) const Component: FC<Props>
 D) export default FunctionComponent<Props>
 
 ### 5). Which utility helps in defining typed dynamic routes?
-
 A) DynamicRoutesType
 B) NextPage
 C) GetRouteTypes
 D) InferGetStaticPropsType
 
 ### 6). How do you define a Next.js API handler with TypeScript?
-
 A) HandlerType<NextApiRequest>
 B) NextApiHandler<Type>
 C) ApiRequestHandler
 D) RequestHandler<Type>
 
 ### 7). What type should be used to type a Head component in Next.js?
-
 A) NextHead
 B) JSX.Element
 C) ReactNode
 D) React.ReactElement
 
 ### 8). How do you type static routes with query parameters in a Next.js page?
-
 A) { params: ParsedUrlQuery }
 B) { params: StaticPaths }
 C) { params: QueryParameters }
 D) { params: DynamicProps }
 
 ### 9). How do you define the types for router.query in Next.js?
-
 A) query: Record<string, string>
 B) query: ParsedUrlQuery
 C) query: NextParsedQuery
 D) query: GenericQueryParams
 
 ### 10). Which Next.js component's props can be typed as NextPage?
-
 A) Head
 B) Link
 C) Custom Document
 D) Page Component
 
-### API Routes ( 10 MCQs)
+## API Routes ( 10 MCQs)
 
 ### 1). What type is used for the req argument in an API route?
-
 A) ApiRequest
 B) NextApiRequest
 C) RequestProps
 D) ApiRouteHandler
 
 ### 2). What type should the response (res) argument have in an API route?
-
 A) NextResponseHandler
 B) HttpResponse
 C) NextApiResponse
 D) ApiRouteResponder
 
 ### 3). How can you define a custom type for API request body?
-
 A) By using Type<{ body: Props }>.
 B) By casting req.body as YourType.
 C) Use NextApiBody<Type>.
 D) req: Request<Type>
 
 ### 4). Which method from NextApiResponse sends a JSON response?
-
 A) res.respond()
 B) res.json()
 C) res.data()
 D) res.sendJson()
 
 ### 5). What is the return type of an API route handler?
-
 A) ApiReturnType
 B) NextApiResponse<Type>
 C) Promise<void>
 D) void
 
 ### 6). How do you handle CORS in an API route?
-
 A) By modifying NextApiRequest headers
 B) Using middleware with cors npm package
 C) Configuring .env with CORS rules
 D) Adding a response header property
 
 ### 7). Can TypeScript enforce API input schema validation in Next.js?
-
 A) Yes, using interfaces only
 B) No, you need runtime validators like Zod or Yup
 C) Only on SSR
 D) Yes, without any runtime validations
 
 ### 8). How can you validate request types using Zod in Next.js?
-
 A) By directly attaching Zod to NextApiRequest
 B) Parsing req.body through Zod's schema
 C) Using Zod middleware
 D) It cannot be used
 
 ### 9). Which package adds typing for API methods like GET and POST?
-
 A) Next.js API Utilities
 B) HTTPMethodEnum from TypeScript-utils
 C) NextApiMethods
 D) Any TypeScript library like Axios
 
 ### 10). What type can strongly type response data sent via res.json()?
-
 A) APIResponseType
 B) ApiBody<Type>
 C) NextApiResponse<Type>
 D) ResponseProps
 
-### Data Fetching (10 MCQs)
+## Data Fetching (10 MCQs)
 
 ### 1). How do you type data returned by getStaticProps?
-
 A) Props
 B) StaticPropsData
 C) InferGetStaticPropsType<typeof getStaticProps>
 D) getStaticType<Props>
 
 ### 2). What type represents the return type of getServerSideProps?
-
 A) Promise<{props: Type}>
 B) InferSSRReturn<Props>
 C) SSRReturnType<Type>
 D) GetServerSidePropsContext
 
 ### 3). How do you type the return of useSWR in Next.js with TypeScript?
-
 A) const { data } = useSWR<Type>('/api/data')
 B) const { data }: SWRResponseType<Type>
 C) const { data } = useSWR<{ type: string }>('/api/data')
 D) const { data }: SWRHook<Type>
 
 ### 4). Which type ensures proper typing for context in getServerSideProps?
-
 A) ServerContextType
 B) InferSSRContext<Type>
 C) GetServerSidePropsContext
 D) SSRContext<Props>
 
 ### 5). When typing the result of getStaticPaths, what type is used?
-
 A) StaticPath[]
 B) GetStaticPathsResult
 C) InferGetStaticPathsType
 D) GetStaticPaths<{ id: string }>
 
 ### 6). What type should be used to handle dynamic params in getStaticProps?
-
 A) StaticPropsParams<Type>
 B) GetStaticPropsContext
 C) DynamicPropsHandler
 D) PropsContextHandler<Type>
 
 ### 7). How can you infer the return type of getStaticProps?
-
 A) GetStaticPropsReturn<typeof getStaticProps>
 B) InferGetStaticPropsReturn<Props>
 C) InferGetStaticPropsType<typeof getStaticProps>
 D) InferPropsReturnType
 
 ### 8). What is the default return type for useEffect-based client-side data fetching?
-
 A) Promise<any>
 B) void
 C) EffectHookReturn
 D) AsyncHookResult
 
 ### 9). How do you type a SWR mutation function in Next.js?
-
 A) mutate: UseSWRMutateHandler<Type>
 B) mutate: SWRMutationHandler<Type>
 C) mutate: (data?: Type) => void
 D) mutate: HookMutation<Type>
 
 ### 10). Can you use TypeScript to enforce return types in getServerSideProps?
-
 A) Yes, always required
 B) No, it does not work for server-based data fetching
 C) Yes, by defining GetServerSideProps<Type>
@@ -650,70 +579,60 @@ D) Not possible in Next.js
 ## 4. Custom Types and Utility Functions (10 MCQs)
 
 ### 1). How can you define a reusable type for an API response in Next.js?
-
 A) type ApiResponse<Type> = { data: Type }
 B) export type APIHandler<Type> = { result: Type }
 C) Define the type in each API route individually
 D) Create a static type for API
 
 ### 2). Which TypeScript utility type is helpful for declaring optional props?
-
 A) Optional<T>
 B) Partial<T>
 C) OptionalsOnly<T>
 D) Omit<T>
 
 ### 3). How do you create a reusable type for common form inputs?
-
 A) type FormInputs = Record<string, string | number>
 B) type FormInputs = Form<string, InputType>
 C) Use Inputs<Props> from TS-Lib
 D) Define HTMLFormElement inputs manually
 
 ### 4). What TypeScript utility allows you to exclude properties from a type?
-
 A) Exclude<T, Properties>
 B) Omit<T, Properties>
 C) Pick<T, Remaining>
 D) FilterProps<T>
 
 ### 5). What utility type makes all fields of a type required?
-
 A) MakeRequired<T>
 B) Enforce<T>
 C) Required<T>
 D) Defaultify<T>
 
 ### 6). How do you type a custom fetch wrapper utility for JSON responses?
-
 A) type FetchResponse = JSONFetch<Type>
 B) const fetch = <T>(): T => ...
 C) const fetch: <T>() => Promise<T>
 D) function fetchData<T>() {...}
 
 ### 7). Which type ensures a utility function receives props from getServerSideProps?
-
 A) NextPageContext
 B) InferSSRUtility<Props>
 C) GetServerSidePropsType<Props>
 D) ContextHandler<Props>
 
 ### 8). What generic type ensures correct typing of an array of IDs in dynamic paths?
-
 A) Array<PathTypes>
 B) StaticPaths<Array<Type>>
 C) PathArrayType<{ id: string }>
 D) Array<{ params: { id: string } }>
 
 ### 9). How do you enforce type safety for utility functions exporting configs?
-
 A) By using type ConfigUtils<Type>
 B) Enforcing export type {...} definitions
 C) Declaring TypedConfig<Type>
 D) By adding TypeScript interfaces
 
 ### 10). What TypeScript utility combines two types into one?
-
 A) Union<Type1, Type2>
 B) Merge<Type1, Type2>
 C) Intersection<Type1 & Type2>
@@ -729,14 +648,12 @@ D) Combine<Type1 | Type2>
 ## Code Splitting (10 MCQs)
 
 ### 1). In Next.js, which function can be used to split JavaScript bundles for page-level code splitting?
-
 A) dynamic()
 B) useEffect()
 C) nextSplit()
 D) lazyLoad()
 
 ### 2). How can you import a component dynamically without SSR using Next.js?
-
 A) dynamic(() => import('component'), { ssr: false })
 B) importLazy('component')
 C) dynamic('component', { ssr: true })
